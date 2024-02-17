@@ -5,6 +5,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/jwt_security
     username: postgres
     password: U53r--wSum
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
