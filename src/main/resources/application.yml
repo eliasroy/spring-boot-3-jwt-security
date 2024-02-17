@@ -1,0 +1,19 @@
+
+#CONFIGURACION DATABASE
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: U53r--wSum
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+      database: postgresql
+      databse-platform: org.dialect.PostgreSQLDialect
+
+
+
