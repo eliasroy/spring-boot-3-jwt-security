@@ -13,7 +13,7 @@ public interface IUserMapper {
     @Select("SELECT * FROM USER WHERE email=#{email}")
     Optional<User> findByEmail(String email);
 
-    @Insert("INSERT INTO USER (LASTNAME, EMAIL, PASSWORD) VALUES (#{LASTNAME}, #{EMAIL}, #{PASSWORD})")
+    @Insert("INSERT INTO USER (FIRSTNAME,LASTNAME, EMAIL, PASSWORD) VALUES (#{FIRSTNAME},#{LASTNAME}, #{EMAIL}, #{PASSWORD})")
     void save(User user);
 
     @Delete("DELETE FROM USER WHERE ID=#{ID}")

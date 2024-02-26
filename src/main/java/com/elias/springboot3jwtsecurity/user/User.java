@@ -21,6 +21,8 @@ public class User  implements UserDetails
     @GeneratedValue
     private Integer id;
     @NotBlank
+    private String firsname;
+    @NotBlank
     private String lastname;
 
     @Email
