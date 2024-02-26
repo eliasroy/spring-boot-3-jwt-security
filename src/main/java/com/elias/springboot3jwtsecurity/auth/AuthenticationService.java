@@ -7,4 +7,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
+    public AuthehenticationResponse register(RegisternRequest request) {
+
+    }
+
+    public AuthehenticationResponse authenticate(AuthenticationRequest request) {
+    }
 }
