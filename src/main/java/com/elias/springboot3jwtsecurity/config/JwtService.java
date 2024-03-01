@@ -18,6 +18,7 @@ public class JwtService {
 
     private static final String SECRET_KEY="qSlVSbcWkX+wuZHOji1LDndNRzIEtY/HTzCPeCVv6sR7as0npPDps8VqgXLLPcwH\n";
     public String extractUsername(String token)
+
     {
         return extractClaim(token,Claims::getSubject);
     }
@@ -28,16 +29,19 @@ public class JwtService {
         return claimResolver.apply(claims);
     }
 
+
     public String generateToken(UserDetails userDetails)
     {
         return generateToken(Map.of(),userDetails);
     }
+
 
     public String generateToken(
             Map<String,Object> extraClaims,
             UserDetails userDetails
     )
     {
+
         return Jwts.builder()
                 .setClaims(extraClaims)
                 .setSubject(userDetails.getUsername())
