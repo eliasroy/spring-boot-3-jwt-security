@@ -17,7 +17,6 @@ public class AuthenticationController {
     public ResponseEntity<AuthehenticationResponse> register(
             @RequestBody RegisternRequest request)
     {
-
         return ResponseEntity.ok(service.register(request)); //200 OK, 201 CREATED, 400 BAD REQUEST, 401 UNAUTHORIZED, 403 FORBIDDEN, 404 NOT FOUND, 500 INTERNAL SERVER ERROR, 501 NOT IMPLEMENTED, 502 BAD GATEWAY, 503 SERVICE UNAVAILABLE, 504 GATEWAY TIMEOUT
     }
 
