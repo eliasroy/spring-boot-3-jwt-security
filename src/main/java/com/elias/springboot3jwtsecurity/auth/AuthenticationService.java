@@ -41,6 +41,8 @@ public class AuthenticationService {
                         request.getPassword()
                 )
         );
+
+
         var user = userMapper.findByEmail(request.getEmail())
                 .orElseThrow();
         var jwtToken = jwtService.generateToken(user);
